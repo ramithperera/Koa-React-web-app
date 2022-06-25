@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "d221fcf9-fa4b-497d-9b74-baba04977aaf",
+		"name": "AF Koa API List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20801645"
+	},
+	"item": [
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"courseName\": \"SE\",\n  \"courseFee\": 2500,\n  \"students\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/course/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"course",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/course/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"course",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"courseName\": \"SE\",\n  \"courseFee\": 3000,\n  \"students\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/course/62b713b84fa939ca4b5284d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"course",
+								"62b713b84fa939ca4b5284d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/course/62b713c34fa939ca4b5284d4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"course",
+								"62b713c34fa939ca4b5284d4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Add Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Ramith Perera\",\n    \"nic\": \"200002700852\",\n    \"age\": 21,\n    \"courseId\" : \"62b713b84fa939ca4b5284d2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/student/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"student",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/student/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"student",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Ramith Perera\",\n    \"nic\": \"200002700852\",\n    \"age\": 22,\n    \"courseId\" : \"62b713b84fa939ca4b5284d2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/student/62b7265f5e84cdcd84ab977e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"student",
+								"62b7265f5e84cdcd84ab977e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/student/62b7254bac19d74772358d55",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"student",
+								"62b7254bac19d74772358d55"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
