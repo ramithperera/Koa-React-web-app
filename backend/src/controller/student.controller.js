@@ -3,8 +3,8 @@ const Course = require("../models/course.model");
 
 const addStudent = async (ctx) => {
   try {
-    const { name, nic, age, courseId } = ctx.body;
-    const student = await Student.Create({
+    const { name, nic, age, courseId } = ctx.request.body;
+    const student = await Student.create({
       name,
       nic,
       age,
@@ -35,7 +35,7 @@ const getStudents = async (ctx) => {
 const updateStudent = async (ctx) => {
   try {
     const studentId = ctx.params.studentId;
-    const { name, nic, age, courseId } = ctx.body;
+    const { name, nic, age, courseId } = ctx.request.body;
 
     const student = await Student.findByIdAndUpdate(studentId, {
       name,
@@ -51,6 +51,7 @@ const updateStudent = async (ctx) => {
     await Course.findByIdAndUpdate(courseId, {
       $push: { students: studentId },
     });
+
     return (ctx.body = student);
   } catch (error) {
     return (ctx.body = { message: error.message });

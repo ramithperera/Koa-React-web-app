@@ -32,11 +32,11 @@ const updateCourse = async (ctx) => {
   try {
     const courseId = ctx.params.courseId;
 
-    const { courseName, courseFee, students } = ctx.body;
+    const { courseName, courseFee, students } = ctx.request.body;
     const course = await Course.findByIdAndUpdate(courseId, {
-      courseName,
-      courseFee,
-      students,
+      courseName: courseName,
+      courseFee: courseFee,
+      students: students,
     });
 
     return (ctx.body = course);
