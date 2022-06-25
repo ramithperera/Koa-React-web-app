@@ -9,7 +9,14 @@ const Home = () => {
                 <br/>
                 <br/>
                 <br/>
-                
+                <Link to="/course">
+                    <button>Go to Course Page</button>
+                </Link>
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                <Link to="/student">
+                    <button>Go to Student Page</button>
+                </Link>
             </center>
         </div>
     );
