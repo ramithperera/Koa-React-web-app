@@ -8,6 +8,9 @@ This project is for the practice skills for the final exam of AF.
 ## What is AF?
 It is a module for third year SE students of SLIIT
 
+**Postman APIs can be found here**
+* [Postman APIs](https://github.com/ramithperera/Koa-React-web-app/blob/master/backend/AF%20Koa%20API%20List.postman_collection.json)
+
 # Installation
 
 ```bash
