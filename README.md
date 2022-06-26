@@ -14,10 +14,12 @@ It is a module for third year SE students of SLIIT
 1) Install dependencies on both backend and frontend folders by running the following command:
 $ npm install
 
-2) Run the following command to start the server in backend folder:
+2) Setup your own mongoDB database and copy the connection string to the .env file in the backend folder.
+
+3) Run the following command to start the server in backend folder:
 $ npm start
 
-3) Run the following command to start the server in frontend folder:
+4) Run the following command to start the server in frontend folder:
 $ npm start
 ```
 # Quick Start (Run frontend backend concurrently)
