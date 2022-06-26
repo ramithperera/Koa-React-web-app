@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently \"npm start\" \"cd ../backend && npm start\"",
     "start": "parcel index.html"
   },
   "author": "Ramith",
@@ -15,6 +16,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "concurrently": "^7.2.2",
     "dotenv": "^16.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
